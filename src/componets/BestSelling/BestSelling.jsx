@@ -3,6 +3,7 @@ import './bestselling.css';
 import N1 from '../../img/N1.png'
 import N2 from '../../img/N2.png'
 import N3 from '../../img/N3.png'
+import BestSellingCard from './ui/BestSellingCard';
 
 export default function BestSelling() {
   return (
@@ -14,48 +15,30 @@ export default function BestSelling() {
           Get in on the trend with our curated selection of best-selling styles.
         </p>
 
+
         <div className="products">
-          <div className="product">
-            <div className="product-image first">
-              <img src={N1} alt="Regular Fit Long Sleeve Top" />
-            </div>
+            <BestSellingCard 
+                img={N1} 
+                title={"Regular Fit Long Sleeve Top"} 
+                price={'$38.99'} 
+                rating={'5.0'} 
+                bc={"#373737"}
+            />
+            <BestSellingCard 
+                img={N2} 
+                title={"Black Crop Tailored Jacket"} 
+                price={'$62.99'} 
+                rating={'4.9'} 
+                bc='#A9D4BA'
+            />
 
-            <h2>Regular Fit Long Sleeve Top</h2>
-
-            <div className="product-info">
-              <span>$38.99</span>
-              <span className="line"></span>
-              <span>5.0 <span className="star">★</span></span>
-            </div>
-          </div>
-
-          <div className="product">
-            <div className="product-image second">
-              <img src={N2} alt="Black Crop Tailored Jacket" />
-            </div>
-
-            <h2>Black Crop Tailored Jacket</h2>
-
-            <div className="product-info">
-              <span>$62.99</span>
-              <span className="line"></span>
-              <span>4.9 <span className="star">★</span></span>
-            </div>
-          </div>
-
-          <div className="product">
-            <div className="product-image third">
-              <img src={N3} alt="Textured Sunset Shirt" />
-            </div>
-
-            <h2>Textured Sunset Shirt</h2>
-
-            <div className="product-info">
-              <span>$49.99</span>
-              <span className="line"></span>
-              <span>5.0 <span className="star">★</span></span>
-            </div>
-          </div>
+            <BestSellingCard 
+                img={N3} 
+                title={'Textured Sunset Shirt'} 
+                price={'$49.99'} 
+                rating={'5.0'} 
+                bc="#CADCD0"
+            />
         </div>
 
         <button className="see-all" type="button">
